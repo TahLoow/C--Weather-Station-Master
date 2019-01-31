@@ -2,11 +2,11 @@
 A Computer Networking semester group project. Header files (excluding project.h) have been removed for the de-"educational" purposes.
 
 The compounded function of the programs is to create a system that:
-  -Acquires the weather conditions from a David Weather Station (wgetter.c) by the minute
-  -Puts latest weather conditions into shared memory (operations.c)
-  -Archives hourly weather data into daily archive files
-  -Allows network connections to the program from over the internet
-  -Maintains a log of network
+  - Acquires the weather conditions from a David Weather Station (wgetter.c) by the minute
+  - Puts latest weather conditions into shared memory (operations.c)
+  - Archives hourly weather data into daily archive files
+  - Allows network connections to the program from over the internet
+  - Maintains a log of network
   
 # Components
 ## engine.c
