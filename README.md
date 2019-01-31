@@ -8,15 +8,15 @@ The compounded function of the programs is to create a system that:
   -Allows network connections to the program from over the internet
   -Maintains a log of network
   
-  
-###### engine.c
+# Components
+## engine.c
   Controls primary functions of the program. On a 60-second (recursive) interval, prompts operations.c to acquire, process, share, and archive weather conditions. Calls `connectNetwork()` from network.c once.
-###### operations.c 
+## operations.c 
   The middleman for weather acquisition, storing the weather into the proper struct, averaging, shared memory, and file archiving.
-###### network.c
+## network.c
   Handles network socket creation. Continuosly listens for network connections. Upon connection, processes a request of data, being current data or a given date's records of data.
-###### wgetter.c
+## wgetter.c
   Acquires raw weather data from David Weather Station. Imports raw sensor_image into currentData struct, which is used throughout the program primarily via the operations.c interface.
-###### logger.c
+## logger.c
   Logs events into the Logs folder using `logger(SourceString,FormatString,Args)`. Records the SourceString, followed by the Args formatted into the FormatString.
 
