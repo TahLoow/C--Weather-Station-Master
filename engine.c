@@ -46,13 +46,6 @@ long times_archived = 0;
 int dataerror = 0;
 
 
-
-void dbprintf(char* output) {
-#if DEBUG > 0
-	printf("%s",output);
-#endif
-}
-
 int assertWSData(long num_recorded) {
 	int attempts = 0;
 	int dataerror = setCurrentData(num_recorded); //initialize datasuccessful to false
@@ -118,6 +111,6 @@ void main ()
 void cancel(int signo)
 {
 	logger("cancel()","\n\n*** Interrupt signal (#%i) caught and ignored ***\n",signo);
-    //closeShm();
-	//    exit(-1);	
+    	//closeShm();
+	//exit(-1);	
 }
